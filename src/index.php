@@ -15,10 +15,11 @@
     <body>
         <div class="container">
             <div class="hero-unit">
-                <h1>Simple PHP App</h1>
+                <h1>PHP App</h1>
                 <h2>Congratulations</h2>
-                <p>Your PHP application is now running on a container in Amazon ECS.</p>
+                <p>Your PHP application is now running on a container in Amazon ECS. And any new Edit to the source code in Git will result in a triggered re-build and cloudformation deployment.</p>
                 <p>The container is running PHP version <?php echo phpversion(); ?>.</p>
+                
                 <?php
                         $myfile = fopen("/var/www/my-vol/date", "r") or die("");
                         echo fread($myfile,filesize("/var/www/my-vol/date"));
